@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perbandingan For dan While</title>
+</head>
+<body>
+    <script>
+        const brands = ["Educa", "Gamelab", "Marbel"];
+
+        // menggunakan for sebagai metode perulangan
+        let i = 0;
+        let text = "";
+
+        for (;brands[i];) {
+        text += brands[i];
+        i++;
+        }
+        console.log( text );
+
+        // menggunakan while sebagai metode perulangan
+        i = 0;
+        text = "";
+
+        while (brands[i]) {
+        text += brands[i];
+        i++;
+        }
+        console.log( text );
+
+    </script>
+</body>
+</html>

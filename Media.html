@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementasi Media</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="800" height="100"></canvas>
+    <table>
+        <tr>
+            <td>
+                Youtube Channel
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <!-- iframe-->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/iogcY_4xGjo?si=jpGudg0QjmAtKIAb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    //gradasi
+    var gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+    gradient.addColorStop(0, '#2DAAE1');
+    gradient.addColorStop(1, '#2D7FC1');
+
+    // Isi latar belakang dengan gradasi
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Tambahkan teks "GAMELAB INDONESIA"
+    ctx.fillStyle = "white";
+    ctx.font = "30px Arial";
+    ctx.fillText("GAMELAB INDONESIA", 240, 60);
+</script>
+</html>

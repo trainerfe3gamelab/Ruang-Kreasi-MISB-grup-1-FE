@@ -1,0 +1,28 @@
+p{
+    font-family: 'arial';
+    line-height: 1.5em;
+}
+
+i{
+    font-family: sans-serif;
+    color: orange;
+}
+
+h2 {
+    font-family: 'Times New Roman';
+    color: burlywood;
+}
+
+span{
+    display: block;
+}
+
+.d-none{
+    visibility: hidden;
+}
+p.static{
+    position:static;
+    color:red;  
+    top: 20px;
+    bottom: 20px;
+}
