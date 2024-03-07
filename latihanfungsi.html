@@ -4,8 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Latihan Fungsi</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 </head>
 <body>
-    <script src="latihanfungsi.js" type="text/javaScript"></script>
+   <h1>Halo, Selamat Datang di Gamelab!</h1>
+   <p>Ini adalah teks paragraf</p>
+   <!--Kuis JQuery Fundamentals-->
+    1. $(selector).action()
+    2. $(this)
+    3. $(‘h1’)
+    4. $(‘.text-danger’)
+    5. $(‘img.avatar’)
+    6. $(‘#app’)
+    7. $(‘div#wrapper’)
+    8. $('[title="about"]')
+    9. $('input[type="number"]')
+    10. $('div p:first-child')
+   <script>
+        //contoh penggunaan jquery cdn
+        $(document).ready(function (){
+            //Seleksi elemen dan lakukan manipulasi
+            $("h1").css("color", "blue");  //Mengubah warna huruf h1 menjadi biru
+        })
+        $(function(){
+            $("p").hide();
+        });
+   </script>
 </body>
 </html>
