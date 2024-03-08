@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Soal penggunaan Event</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(4, 4, 250);
+        }
+        #box:hover{
+            background-color: green;
+        }
+    </style>
+</head>
+<body> 
+    <!--Latihan menggunakan event mouse-->
+    <div id="box"></div>
+
+    <!--Latihan menggunakan event keyboard-->
+    <input type="text" id="myInput"/>
+
+    <!--Latihan menggunakan event form-->
+    <h2>Registrasi Form</h2>
+    <form id="registrasiForm">
+        <input type="text" id="registrasiUsername" placeholder="Username">
+        <input type="password" id="registrasiPassword" placeholder="Password">
+        <input type="password" id="confirmPassword" placeholder="Confirm Password">
+        <button type="submit">Submit</button>
+    </form>
+    <hr/>
+    <h2>Login Form</h2>
+    <form id="loginForm">
+        <input type="text" id="loginUsername" placeholder="Username">
+        <input type="password" id="loginPassword" placeholder="Password">
+        <button type="submit">Login</button>
+    </form>
+    <script src="LatihanSoal.js"></script>
+</body>
+</html>
