@@ -1,0 +1,121 @@
+#pokedex
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pokemon-card
+{
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+
+}
+
+.pokemon-card img
+{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 5px;
+}
+
+#pokedex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .pokemon-card {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+  }
+  .pokemon-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 5px;
+  }
+
+  .pokemon-card.grass {
+    background-color: #9bcc50; 
+}
+.pokemon-card.fire{
+    background-color: orange;
+}
+
+.pokemon-card.water{
+    background-color: skyblue;
+}
+
+.pokemon-card.bug{
+    background-color: springgreen;
+}
+
+.pokemon-card.electric{
+    background-color: yellow;
+}
+.pokemon-card.normal{
+    background-color: gray;
+}
+
+.pokemon-card.poison{
+    background-color: purple;
+}
+
+.pokemon-card.ground{
+    background-color: beige;
+}
+
+.pokemon-card.fairy{
+    background-color: violet;
+}
+
+.pokemon-card.rock{
+    background-color: #5C4033;
+}
+
+.pokemon-card.fighting{
+    background-color: #C4A484;
+}
+
+.pokemon-card.ghost{
+    background-color: #301934;
+}
+
+.pokemon-card.steel{
+    background-color: silver;
+}
+
+.pokemon-card.dragon{
+    background-color: #4444FF;
+}
+
+.pokemon-card.dark{
+    background-color: darkgrey;
+}
+
+.pokemon-card.psychic{
+    background-color: #7272FF;
+}
+
+.pokemon-card.fire.flying{
+    background-image: linear-gradient(to bottom right, lightblue, orange);
+}
+
+.pokemon-card.normal.flying{
+    background-image: linear-gradient(to bottom right, grey, lightblue);
+}
+
+.pokemon-card.grass.poison{
+    background-image: linear-gradient(to bottom right, #9bcc50, purple);
+}
+
+.pokemon-card.ground.poison{
+    background-image: linear-gradient(to bottom right, beige, purple);
+}
