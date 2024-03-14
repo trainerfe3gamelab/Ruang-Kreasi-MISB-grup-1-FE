@@ -13,34 +13,41 @@ function fetchPokemonData(id) {
     });
 }
 
-//Fungsi untuk menampilkan kartu pokemon
 function displayPokemonCard(pokemonData) {
   const pokemonCard = $("<div></div>").addClass("pokemon-card");
 
-  //Menambahkan kelas berdasarkan tipe pokemon
-  pokemonData.types.forEach((type) => {
-    pokemonCard.addClass(type.type.name);
-  });
+  // Menambahkan kelas berdasarkan tipe pokemon jika tersedia
+  if (pokemonData.types && pokemonData.types.length > 0) {
+      pokemonData.types.forEach((type) => {
+          pokemonCard.addClass(type.type.name);
+      });
+  }
 
-  const pokemonNumber = $("<p></p>").text(
-    `#${pokemonData.id.toString().padStart(3, "0")}`
+  const pokemonNumber = $('<p></p>').text(
+      `#${pokemonData.id.toString().padStart(3, "0")}`
   );
-  const pokemonName = $("<h3></h3>").text(pokemonData.name);
-  const pokemonTypes = $("<p></p>").text(
-    `Tipe: ${pokemonData.types.map((type) => type.type.name).join(",")}`
-  );
+  const pokemonName = $('<h3></h3>').text(pokemonData.name);
 
-  const pokemonStats = $("<p></p>").text("Statik Pokemon:");
-  pokemonData.stats.forEach((stat) => {
-    const statInfo = $("<span></span>").text(
-      `${stat.stat.name}: ${stat.base_stat}`
-    );
-    pokemonStats.append(statInfo);
-    pokemonStats.append("<br>");
-  });
-  const pokemonImage = $('<img>')
-    .attr("src", pokemonData.sprites.font_default)
-    .attr("alt", pokemonData.name);
+  // Menampilkan tipe Pokemon jika tersedia
+  const pokemonTypes = $('<p></p>').text("Tipe: ");
+  if (pokemonData.types && pokemonData.types.length > 0) {
+      const types = pokemonData.types.map((type) => type.type.name);
+      pokemonTypes.append(types.join(", "));
+  }
+
+  const pokemonStats = $('<p></p>').text("Statik Pokemon:");
+  // Menampilkan statistik Pokemon jika tersedia
+  if (pokemonData.stats && pokemonData.stats.length > 0) {
+      pokemonData.stats.forEach((stat) => {
+          const statInfo = $('<span></span>').text(
+              `${stat.stat.name}: ${stat.base_stat}`
+          );
+          pokemonStats.append(statInfo);
+          pokemonStats.append("<br>");
+      });
+  }
+
+  const pokemonImage = $('<img>').attr("src", pokemonData.sprites.front_default).attr("alt", pokemonData.name);
 
   pokemonCard.append(pokemonNumber);
   pokemonCard.append(pokemonName);
